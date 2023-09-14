@@ -15,4 +15,4 @@ Install-ChocolateyInstallPackage @packageArgs
 
 Get-ChildItem $toolsPath\*.exe | ForEach-Object { Remove-Item $_ -ea 0; if (Test-Path $_) { Set-Content "$_.ignore" '' } }
 
-Install-BinFile gitex "$(Get-AppInstallLocation GitExtensions*)\gitex.cmd"
+Install-BinFile gitex "$(Get-AppInstallLocation "Git Extensions*")\gitex.cmd"
